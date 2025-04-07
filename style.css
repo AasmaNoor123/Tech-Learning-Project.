@@ -1,0 +1,683 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    width: 100%;
+}
+
+/* Header Section */
+header {
+    border-bottom: 1px solid #ddd;
+    position: sticky; /* Makes the navbar stick to the top */
+    top: 0; /* Sticks to the top of the viewport */
+    z-index: 1000; /* Ensures it stays above other elements */
+    background-color: #fff; /* Background color for the navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    padding: 10px 20px;
+}
+
+.container.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.logo span {
+    color: #007bff; /* Highlighted color for "Tutor" */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between links */
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #007bff; /* Hover effect for links */
+}
+.menu-toggle {
+display: none;
+}
+.btn-main {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.btn-main:hover {
+    background-color: #0056b3;
+}
+
+/* Hero Section */
+
+.main {
+    background: linear-gradient(135deg, #2664c2, #2a86e9, #e0f4ff);      
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px;
+    height: 75vh;
+    overflow-y: hidden;
+  }
+  
+  .main-content {
+    display: flex;
+    color: white;
+    gap: 40px;
+  }
+  .main-left .tag {
+    background-color: #e0f4ffe2;
+    color: #1854ad;
+    font-weight: bold;
+    padding: 6px 12px;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .main-left h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  .main-left p {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .main-left .highlight {
+    color: white;
+    font-weight: bold;
+  }
+  
+  .main-left .btn-main {
+    background-color: #2664c2;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .main-left .btn-main:hover {
+    background-color: #1e4e92;
+  }
+  .main-right{
+    margin-left: 300px;
+  }
+/* container */
+.mains h1 {
+  color:  #007bff;
+  font-size: 36px;
+  margin-bottom: 10px;
+ margin-left: 10%;
+}
+.mains p{
+  color:  #007bff;
+  font-size: 17px;
+  margin-bottom: 8px;
+  margin-left: 10%;
+}
+.containers {
+  background-color: white;
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));/*
+  "Create as many columns as you can fit in the container - each column should be 250px wide and the remaining space should be divided equally."*/
+  gap: 20px;
+}
+.mains h1,.mains p {
+
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.card {
+  background-color: #fff;
+  color: #007bff;
+  padding: 20px;
+  border:.20px solid rgb(199, 198, 198);
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border: 1.5px solid#007bff;
+  box-shadow:0px 0px 18px #a5a2a2;
+}
+
+.image-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.card h4 {
+  font-size: 1rem;
+  color: black;
+}
+
+.card h5 {
+  font-size: 0.9rem;
+  margin: 10px 0;
+  color: #007bff;
+}
+
+.card p {
+  font-size: 16px;
+  color: #b4b9c2;
+  line-height: 1.5;
+}
+.container2 {
+  text-align: center;
+}
+
+.headline {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.enroll-btn {
+  background-color: #007bff;
+  width: 150px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+ 
+}
+
+.enroll-btn:hover {
+  background-color: #08243a;
+  transition: transform 0.6s ease;
+}
+
+  /* Footer Section */
+  .footer {
+    background-color: #084d98;
+    color: #ffffff;
+    padding: 40px 20px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 7rem;
+  }
+  
+  .footer-about, .footer-contact {
+    flex: 1;
+    width: 80px;
+    height: fit-content;
+  }
+  
+  .footer h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .footer p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+
+  
+  /* Social Icons */
+  .social-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .social-icons a {
+    color: #ffffff;
+    font-size: 21px;
+    transition: 0.3s ease;
+    margin-top: 15px;
+  }
+  
+  .social-icons a:hover {
+    color: gold;
+    text-shadow: 0px 0px 2px black;
+    transform: translatey(-6px);
+  }
+  
+  /* Footer Bottom Section */
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ffffff;
+  }
+/* footer icons */
+  .footer-contact i {
+    margin-right: 8px;
+    color:rgb(255, 217, 0);
+  }
+  /* sign in */
+  /* Center the auth-container */
+#auth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #f8f9fa; /* Light background for the container */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#auth-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #2664C2;
+}
+
+#auth-container input {
+  width: 60%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#auth-container button {
+  display: block; /* Ensure buttons stack vertically */
+  width: 60%; /* Adjust width for better alignment */
+  padding: 10px;
+  margin: 10px auto; /* Add space between buttons and center them */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center; /* Center the text inside the button */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#auth-container button:hover {
+  background-color: #0056b3;
+}
+
+#auth-container p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+#auth-container a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+#auth-container a:hover {
+  text-decoration: underline;
+}
+  
+/* Form Page Styling */
+#formPage {
+  max-width: 600px;
+  height: 90%;
+  margin: 50px auto;
+  padding: 40px;
+  background: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#formPage h2 {
+  text-align: center;
+  color: #2664c2;
+}
+
+#studentForm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+#studentForm div {
+  width: 48%;
+  margin-bottom: 15px;
+}
+
+#studentForm .full-width {
+  width: 100%;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #333;
+}
+input:focus, select:focus {
+  outline: 2px solid #2664C2; /* Blue outline */
+}
+
+button {
+  width: 48%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #2664C2;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1e4e92;
+}
+
+/* id card */
+#idCard {
+  background: #f4f4f4;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 350px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+}
+
+#idCard h2 {
+  color: #007bff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#idCard img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 2px solid #007bff;
+  display: block; /* Center the image */
+  margin-left: auto; /* Center the image */
+  margin-right: auto; /* Center the image */
+}
+
+#idCard p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #333;
+  text-align: center; /* Center the text */
+}
+
+#idCard button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 15px;
+  display: block; /* Center the button */
+  margin-left: auto; /* Center the button */
+  margin-right: auto; /* Center the button */
+}
+
+#idCard button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Styles */
+
+/* Tablets (max-width: 991px) */
+@media (max-width: 991px) {
+  .container.header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .menu-toggle {
+    display: block; /* Show the menu toggle on smaller screens */
+    margin-left: 98%;
+    margin-top: -50PX;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #007bff;
+    }
+nav {
+  display: none;
+  flex-direction: column;
+  background: #f8f9fa;
+  padding: 10px;
+  position: absolute;
+  top: 70px;
+  right: 1px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+
+nav.show {
+  display: flex;
+}
+
+  .main {
+    flex-direction: column;
+    padding: 40px 20px;
+    height: auto;
+    text-align: center;
+  }
+
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .main-left h1 {
+    font-size: 28px;
+  }
+
+  .main-left p {
+    font-size: 14px;
+  }
+  .menu-toggle {
+    display: block;
+}
+.main-right{
+  margin-left: 50px;
+}
+}
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #f8f9fa;
+    padding: 10px;
+    position: absolute;
+    top: 70px;
+    right: 1px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    z-index: 100;
+  }
+
+  nav.show {
+    display: flex; /* Show the navbar when the toggle is clicked */
+  }
+
+  nav a {
+    margin: 10px 0; /* Add spacing between links */
+  }
+
+  .menu-toggle {
+    display: block; /* Show the menu toggle on smaller screens */
+    margin-left: 98%;
+    margin-top: -50PX;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #007bff;
+    }
+    .main-right{
+      margin-left: 20px;
+    }
+  
+    .mains h1 {
+      font-size: 28px;
+      text-align: center;
+    }
+  
+    .mains p {
+      font-size: 14px;
+      text-align: center;
+    }
+  
+    .container2 {
+      padding: 20px;
+    }
+  
+    .headline {
+      font-size: 20px;
+    }
+  
+    .enroll-btn {
+      width: 100%;
+      max-width: 200px;
+      font-size: 16px;
+    }
+  
+    .footer-container {
+      flex-direction: column;
+      padding: 2rem;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-about,
+    .footer-contact {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+}
+
+/* Mobile (max-width: 600px) */
+@media (max-width: 600px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #f8f9fa;
+    padding: 10px;
+    position: absolute;
+    top: 60px;
+    right: -1px;
+    width: 98%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 100;
+  }
+  
+  .menu-toggle {
+  display: block; /* Show the menu toggle on smaller screens */
+  margin-left: 98%;
+  margin-top: -50PX;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #007bff;
+  }
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .btn-main {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    width: 200px;
+  }
+  .main-left h1 {
+    font-size: 24px;
+  }
+
+  .main-left p {
+    font-size: 13px;
+  }
+
+  .main-left .btn-main {
+    padding: 10px 20px;
+  }
+  #studentForm div {
+    flex: 1 1 100%; /* Make each div take full width on small screens */
+  }
+
+  #formPage {
+    padding: 15px; /* Reduce padding for smaller screens */
+    width: 65%; /* Adjust width to fit smaller screens */
+  }
+  input, select {
+    width: 90%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333;
+  }
+  #formPage h2 {
+    font-size: 18px; /* Adjust heading size */
+  }
+  #form-btn{
+  display: inline;
+  }
+
+.image{
+  margin-left: 0%;
+  width: 100%;
+  height: auto;
+  border-radius: 10%;
+}
+}

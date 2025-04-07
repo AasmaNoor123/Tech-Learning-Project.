@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="  https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <title>E-learning - Advanced Data Science Course</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+  <div class="container header">
+    <div class="logo">Code_<span>Commanders</span></div>
+    
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div> 
+    
+    <nav id="navbar">
+      <a href="./about.html">About</a>
+      <a href="./course.html">Courses</a>
+      <a href="#docs">Blogs</a>
+      <button onclick="location.href='signin.html'" class="btn-main">Sign In</button>
+    </nav>
+  </div>
+</header>
+
+<!-- Main Section -->
+<section class="main">
+  <div class="main-content">
+ 
+    <div class="main-left">
+      <div class="tag">Specialization over generalization</div>
+      <h1>Learning IT & AI Course</h1>
+      <p>
+        Equip yourself with IT  & data science skills through live, <br> interactive lectures guided by industry expert mentors.
+      </p>
+      <p><span class="highlight">Live</span> <span>Interactive Classes</span></p>
+      <button onclick="location.href='form.html'" class="btn-main">⬇️ Apply Now </button>
+    </div>
+    
+    <div class="main-right">
+        <img src="man-wearing-t-shirt-gesturing.png" alt="mabn img"  class="image">
+    </div>
+</section>
+<!-- Cards Section -->
+<section>
+  <div class="mains">
+    <h1>Programs Tech is Offering</h1>
+    <p>Explore our range of Specializations designed to help you excel in your career.</p>
+  </div>
+<div class="containers">
+  <!-- Card 1 -->
+  <div class="card image-card">
+    <img src="./card 1.png" alt="Certification Guide" />
+    <h4>Data Analyst Python</h4>
+    <h5>Analyzes data using Python tools to uncover insights, create visualizations, and support data-driven business decisions.</h5>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="card  image-card">
+    <img src="./card 2.png" alt="Certification Guide" />
+    <h4>Data Science & AI</h4>
+    <h5>Uses algorithms and data to build intelligent systems that learn, predict outcomes, and solve complex real-world problems.</h5>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="card image-card">
+    <img src="./card 3.png" alt="Certification Guide" />
+    <h4>Web & App Development</h4>
+    <h5>Designs and builds responsive websites and mobile applications using modern frameworks, ensuring functionality, performance, and user experience.</h5>
+  </div>
+
+  <!-- Card 4 (Image Card) -->
+  <div class="card image-card">
+    <img src="./card 4.png" alt="Certification Guide" />
+    <h4>CyberSecurity</h4>
+    <h5>Protects systems and networks from digital threats through risk assessment, monitoring, encryption, and secure coding practices.</h5>
+  </div>
+</div>
+</section>
+<section>
+  <div class="container2">
+    <h1 class="headline">Unlock Your Path to a Brighter Tomorrow</h1>
+    <button class="enroll-btn">Enroll Now</button>
+</div>
+</section>
+<br><br><br>
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- About Section -->
+    <div class="footer-about">
+      <h3>About</h3>
+      <p>
+        Tech-Learning kickstart student's tech <br> careers with first internships, <br>providing industry exposure, <br>
+        practical skills, and networking <br> opportunities, paving the way for <br> their success in the tech industry.
+      </p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="footer-contact">
+      <h3>Have a Question?</h3>
+      <p><i class="fas fa-map-marker-alt"></i> Nishtar Rd, Head Quarters, Karachi, Sindh 74000</p>
+      <p><i class="fas fa-phone-alt"></i> +92 312 8906573</p>
+      <p><i class="fas fa-envelope"></i> info@techlearning.pk</p>
+    </div>
+  </div>
+
+  <!-- Copyright Section -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 All rights reserved | Tech-Learning</p>
+  </div>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.getElementById("menu-toggle");
+  const nav = document.getElementById("navbar");
+
+  toggleBtn.addEventListener("click", () => {
+    nav.classList.toggle("show");
+  });
+});
+</script>
+
+<script type="module" src="./script.js"></script>
+</body>
+</html>

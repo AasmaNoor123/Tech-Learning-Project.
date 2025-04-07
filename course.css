@@ -1,0 +1,166 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Page Header */
+  .page-header {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  /* Course Card */
+  .course-card {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 20px;
+    border: .20px solid rgb(150, 149, 149);
+    border-radius: 15px ;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  .course-card:hover{
+    border: 1.70px solid #007bff;
+    box-shadow:0px 0px 20px #9f9e9e;
+  }
+
+
+  /* Inline Header Layout */
+  .course-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Course Title */
+  .course-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #222;
+  }
+  
+  /* Course Date */
+  .course-date {
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .course-date span {
+    font-size: 16px;
+    margin-left: 5px;
+    color: #555;
+  }
+  
+  /* Course Schedule */
+  .course-schedule {
+    font-size: 18px;
+    color: #666;
+  }
+  
+  /* Enroll Button */
+  .enroll-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .enroll-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  /* Course Info Section */
+  .course-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+  }
+  
+  .info-box {
+    flex: 1 1 calc(25% - 20px);/*Yeh 20px usually gap/margin ya spacing adjust karne ke liye use hota hai.*/
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .info-box strong {
+    display: block;
+    font-size: 18px;
+    color: #007bff;
+    margin-bottom: 5px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .course-header {
+      flex-direction: column;
+    }
+  
+    .info-box {
+      flex: 1 1 calc(50% - 10px);
+    }
+  
+    .course-title {
+      font-size: 22px;
+    }
+  
+    .course-date {
+      font-size: 18px;
+    }
+  
+    .course-schedule {
+      font-size: 16px;
+    }
+  
+    .enroll-button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .info-box {
+      flex: 1 1 100%;
+    }
+  
+    .page-header {
+      font-size: 24px;
+    }
+  
+    .course-title {
+      font-size: 20px;
+    }
+  
+    .course-date {
+      font-size: 16px;
+    }
+  
+    .course-schedule {
+      font-size: 15px;
+    }
+  }
+  

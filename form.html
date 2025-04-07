@@ -1,0 +1,161 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Student Form</title>
+</head>
+<body>
+    <div id="formPage">
+        <h2>Student Form</h2>
+        <form id="studentForm">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Full Name" required>
+            </div>
+            <div>
+                <label for="batch">Batch</label>
+                <input type="text" id="batch" value="Batch 1" readonly>
+            </div>
+            <div>
+                <label for="course">Course</label>
+                <select id="course" required>
+                    <option value="Web & App Development">Select Course</option>
+                    <option value="Web & App Development">Web & App Development</option>
+                    <option value="Data Science & AI">Data Science & AI</option>
+                    <option value="Cyber Security">Cyber Security</option>
+                    <option value="Digital Marketing">Digital Marketing</option>
+                </select>
+            </div>
+            <div>
+                <label for="address">Address</label>
+                <input type="text" id="address" placeholder="Address" required>
+            </div>
+            <div>
+                <label for="qualification">Last Qualification</label>
+                <input type="text" id="qualification" placeholder="Last Qualification" required>
+            </div>
+            <div>
+                <label for="laptop">Do You Have Laptop?</label>
+                <input type="text" id="laptop" placeholder="Yes/No" required>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Email Address" required>
+            </div>
+            <div>
+                <label for="time">Timing</label>
+                <select id="time" required>
+                    <option value="Web & App Development">Select Timing</option>
+                    <option value="Web & App Development">Mon,Tues & Wed ( 01:00pm-03:00pm )</option>
+                    <option value="Data Science & AI">Thurs & Fri( 01:00pm-03:00pm )</option>
+                    <option value="Cyber Security">Sat & Sun ( 01:00pm-03:00pm) </option>
+                </select>
+            </div>
+            <div class="full-width">
+                <label for="photo">Upload Photo</label>
+                <input type="file" id="photo" accept="image/*" required>
+            </div>
+            <div class="full-width">
+                <button type="submit" id="form-btn" >Submit</button>
+                <button type="button" onclick="window.location.href='index.html'" id="logout-btn" id="form-btn">Logout</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="idCard" style="display: none;">
+        <h2>ID Card</h2>
+        <img id="cardPhoto" src="" alt="Uploaded Photo" style="width: 100px; height: 100px;"/>
+        <p><strong>Name:</strong> <span id="cardName"></span></p>
+        <p><strong>Batch:</strong> <span id="cardBatch"></span></p>
+        <p><strong>Course:</strong> <span id="cardCourse"></span></p>
+        <p><strong>Roll Number:</strong> <span id="cardRollNumber"></span></p>
+        <button id="printButton">Print ID Card</button>
+    </div>
+
+    <script>
+
+        function generateRollNumber() {
+        return Math.floor(Math.random() * 1000000); // Generates a random number between 0 and 99999
+    }
+
+        document.getElementById('studentForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Get values from the form
+            const name = document.getElementById('name').value;
+            const batch = document.getElementById('batch').value;
+            const course = document.getElementById('course').value;
+            const address = document.getElementById('address').value; // Address variable added
+            const rollNumber = generateRollNumber(); // Increment and get the roll number
+
+            // Set values in the ID card
+            document.getElementById('cardName').innerText = name;
+            document.getElementById('cardBatch').innerText = batch;
+            document.getElementById('cardCourse').innerText = course;
+            document.getElementById('cardRollNumber').innerText = rollNumber; // Set the generated roll number
+
+            // Get the uploaded photo
+            const photoInput = document.getElementById('photo');
+            const file = photoInput.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                document.getElementById('cardPhoto').src = e.target.result; // Set the ID card photo to the uploaded image
+            };
+
+            if (file) {
+                reader.readAsDataURL(file); // Read the uploaded file as a data URL
+            }
+
+            // Show the ID card
+            document.getElementById('formPage').style.display = 'none';
+            document.getElementById('idCard').style.display = 'block';
+        });
+
+//         document.getElementById("photo").addEventListener("click", function() {
+
+// //"downloadIdCard" button ko select karta hai.Jab button click hoga, function execute hoga.    
+//     let canvas = document.createElement("canvas");
+//         canvas.width = 400;
+//             canvas.height = 250;
+//             let ctx = canvas.getContext("2d");
+//             ctx.fillStyle = "#f8f9fa";
+//             ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+//             ctx.font = "16px Arial";
+//             ctx.fillStyle = "black";
+//             ctx.fillText("Name: " + document.getElementById("name").value, 20, 40);
+//             ctx.fillText("Father: " + document.getElementById("fathername").value, 20, 70);
+//             ctx.fillText("Qualification: " + document.getElementById("qualification").value, 20, 100);
+//             ctx.fillText("Phone: " + document.getElementById("phone").value, 20, 130);
+//             ctx.fillText("Country: " + document.getElementById("country").value, 20, 160);
+//             ctx.fillText("City: " + document.getElementById("city").value, 20, 190);
+
+//             let previewImg = document.getElementById("preview");
+//             if (previewImg.src) {
+//                 let img = new Image();
+//                 img.src = previewImg.src;
+//                 img.onload = function() {
+//                     ctx.drawImage(img, 300, 30, 80, 80);
+//                     let link = document.createElement("a");
+//                     link.download = "ID_Card.png";
+//                     link.href = canvas.toDataURL();
+//                     link.click();
+//                 };
+//             } else {
+//                 let link = document.createElement("a");
+//                 link.download = "ID_Card.png";
+//                 link.href = canvas.toDataURL();
+//                 link.click();
+//             }
+     
+//         });
+        document.getElementById('printButton').addEventListener('click', function() {
+            window.print();
+        });
+    </script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
